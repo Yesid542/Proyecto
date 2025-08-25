@@ -1,0 +1,91 @@
+body{
+    background-image: url(../img/BackgroundProyecto.png);
+    background-size: cover;
+    display:grid;
+    justify-content: center;
+}
+
+
+.invalid {
+    color: red;
+}
+.valid {
+    color: green;
+}/* Estilo general del fondo */
+#fondo {
+    margin-top: 100px;
+    background-color: #6b686b; /* Un morado claro para el fondo */
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 500px;
+    font-family: Arial, sans-serif;
+    border-radius: 20px;
+    opacity: 0.9;
+  }
+  
+  /* Estilo del formulario */
+  #passwordForm {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    border: 2px solid #7b1fa2; /* Un borde morado */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  /* Etiquetas del formulario */
+  #passwordForm label {
+    color: #4a148c; /* Un morado oscuro para el texto */
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Campos de entrada */
+  #passwordForm input {
+    border: 1px solid #7b1fa2;
+    border-radius: 5px;
+    padding: 8px;
+    width: 90%;
+    margin: 10px 0;
+  }
+  
+  /* Botón */
+  #submitButton {
+    background-color: #7b1fa2; /* Un morado oscuro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: not-allowed; /* Estado inicial */
+  }
+  
+  #submitButton:enabled {
+    background-color: #ab47bc; /* Cambia a un morado más claro cuando esté habilitado */
+    cursor: pointer;
+  }
+  
+  /* Lista de requisitos */
+  #requirements {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+  }
+  
+  #requirements li {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  /* Requisitos válidos e inválidos */
+  .valid {
+    color: green;
+  }
+  
+  .invalid {
+    color: red;
+  }
+  

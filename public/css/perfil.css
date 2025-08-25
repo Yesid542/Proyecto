@@ -1,0 +1,138 @@
+body {
+    background-image: url(./../img/BackgroundProyectoClaro.jpg);
+    background-size: cover;
+}
+
+
+#agua{
+    background-color:rgb(41, 38, 35);
+    height:430px;
+    width: 700px;
+    margin-top: 0%;
+    margin-left: 25%;
+    border-radius: 20px;
+    padding-top: 5px;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif   ;
+}
+
+
+#logo{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 40px;
+    margin-left: 10%;
+    background-image: url(../img/logo.png);
+    background-size: cover;
+}
+#formulario{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 110px;
+    margin-top: 10px;
+    margin-left: -150px;
+    height: 200px;
+    width: 300px;
+    color: rgb(207, 2, 207);
+    font-size: 30px;
+    
+}
+
+
+.input {
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px 10px; /* Agregar espacio interno para mejor apariencia */
+    border: 2px solid #ccc; /* Borde inicial */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.input:hover {
+    border-color:rgb(207, 2, 207); /* Cambiar color del borde al pasar el cursor */
+    box-shadow: 0 0 5px rgb(207, 2, 207); /* Agregar sombra al pasar el cursor */
+}
+
+
+#titulo{
+    align-items: end;
+    margin-bottom:380px;
+    font-size: 30px;
+    width: 200px;
+    color: rgb(207, 2, 207);
+}
+#label{
+    margin-top: 20px;
+}
+#recordar{
+    font-size: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: rgb(207, 2, 207);
+}
+
+#botones{
+    display: flex; 
+    align-items: center;    
+    margin-top: 20px; 
+}
+
+
+#ingresar{
+    border: 2px solid rgb(207, 2, 207);
+    background-color: #e3e8f0; /* Color de fondo inicial */
+    color:rgb(207, 2, 207); /* Color del texto */
+    width: 100px;
+    margin-top: -2px;
+    margin-left:px;
+    font-size: 15px;
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animación suave */
+}
+
+#ingresar:hover {
+    background-color:rgb(207, 2, 207); /* Color de fondo al pasar el cursor */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+    color: #f3f2f2; /* Asegurar que el texto se mantenga blanco */
+    display: flex;
+    flex-direction: column;
+}
+
+#g_id_onload, .g_id_signin, .fb-login-button {
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-bottom: 25px;
+    width: 44px;
+}
+#superior{
+    display: flex;
+    margin-left: 400px;
+    margin-top:70px;
+    color:rgb(207, 2, 207) ;
+}
+.error{
+    color:rgb(211, 85, 85);
+    margin-left:370px ;
+    margin-bottom: 5px;
+
+}
+
+#volver{
+    color:rgb(207, 2, 207) ;
+    height:20px;
+    text-decoration: none;
+    margin-top:30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif   ;
+}
+#volver:hover{
+    color: white;
+}
+#user-image{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}

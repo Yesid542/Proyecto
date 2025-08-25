@@ -1,0 +1,46 @@
+body{
+    background-image: url(../img/BackgroundProyectoClaro.jpg);
+    background-size: cover;
+}
+
+.container {
+    max-width: 500px;
+    padding-top: 40px;
+    border-radius: 15px;
+    margin-bottom: 50px; /* Espacio para que no toque el footer */
+}
+.form-group {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.titulo{
+    color:rgb(216, 28, 200);
+    margin-top: 40px;
+}
+.label{
+    color:rgb(216, 28, 200);
+    max-width: 300px;
+    margin-top: 2px;
+}
+#correo{
+    margin-bottom: 10px;
+    margin-top:5px;
+    color: rgb(216, 28, 200); ;
+}
+#agua{
+    opacity: 0.9;
+    background-color:rgb(41, 38, 35);
+    max-width: 500px;
+    height: 400px;
+    padding-top: 40px;  
+    border-radius: 15px;
+    justify-items: center;
+}
+.boton{
+    margin-left: 70px;
+    margin-top: 20px;
+}
+#texto{
+    color: white ;
+    margin-top: 20px;
+}

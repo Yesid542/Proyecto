@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envío Automático de Token</title>
+</head>
+<body>
+    <h1>Envío Automático de Token</h1>
+    <div id="resultado"></div>
+
+    <form id="myForm" action="http://localhost/src/api.php" method="POST">
+        <input type="hidden" name="token" value="">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        // Variable para controlar si el formulario ya fue enviado
+        let formularioEnviado = false;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Simular un token en localStorage (en producción, este vendría de Firebase Auth)
+            // Puedes comentar esta línea si ya tienes el token guardado
+            
+            
+            const token = localStorage.getItem('authToken');
+            const form = document.getElementById('myForm');
+            const resultadoDiv = document.getElementById('resultado');
+            
+            // Verificar si existe el token
+            if (!token) {
+                resultadoDiv.innerHTML = '<p style="color: red;">No se encontró el token en localStorage</p>';
+                return;
+            }
+            
+            // Asignar el token al campo oculto
+            document.querySelector('input[name="token"]').value = token;
+            
+            // Prevenir el comportamiento predeterminado del formulario ANTES de enviarlo
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                
+                // Solo enviar si no se ha enviado antes
+                if (!formularioEnviado) {
+                    formularioEnviado = true;
+                    enviarFormularioAjax(form, token, resultadoDiv);
+                }
+            });
+            
+            // Iniciar el envío automático si no se ha enviado antes
+            if (!formularioEnviado) {
+                setTimeout(() => {
+                    formularioEnviado = true;
+                    enviarFormularioAjax(form, token, resultadoDiv);
+                }, 500); // Pequeño retraso para asegurar que todo está cargado
+            }
+        });
+        
+        // Función para enviar el formulario usando fetch API
+        function enviarFormularioAjax(form, token, resultadoDiv) {
+    resultadoDiv.innerHTML = '<p>Enviando token al servidor...</p>';
+    
+    // Crear objeto FormData con los datos del formulario
+    const formData = new FormData();
+    formData.append('token', token);
+    
+    // Enviar solicitud usando fetch (asegura que sea POST)
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        // No es necesario establecer Content-Type, fetch lo hace automáticamente con FormData
+    })
+    .then(response => response.text()) // Cambiar a .text() para manejar texto plano
+    .then(data => {
+        resultadoDiv.innerHTML = `
+            <p style="color: green;">Respuesta del servidor:</p>
+            <pre>${data}</pre>
+        `;
+    })
+    .catch(error => {
+        resultadoDiv.innerHTML = `
+            <p style="color: red;">Error al enviar el formulario:</p>
+            <pre>${error.message}</pre>
+        `;
+        console.error('Error:', error);
+    });
+}
+
+    </script>
+</body>
+</html>
+
